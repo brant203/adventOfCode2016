@@ -1,14 +1,10 @@
 package advent.impl;
 
-import advent.BathroomSecurity;
-import advent.NoTimeForATaxicab;
-import advent.PuzzleInput;
-import advent.PuzzleSolver;
+import advent.*;
 import advent.impl.bathroomSecurity.BathroomSecurityImpl;
+import advent.impl.squaresWithThreeSides.SquaresWithThreeSidesImpl;
 
-/**
- * Created by brant on 12/4/2016.
- */
+
 public class PuzzleSolverImpl implements PuzzleSolver{
     public static void main(String[] args) {
         PuzzleInput puzzleInput = new PuzzleInputImpl();
@@ -28,5 +24,13 @@ public class PuzzleSolverImpl implements PuzzleSolver{
         System.out.println("Day2:");
         System.out.println("Objective 1: " + day2Objective1);
         System.out.println("Objective 2: " + day2Objective2);
+
+        /*day3*/
+        SquaresWithThreeSides day3 = new SquaresWithThreeSidesImpl(puzzleInput);
+        int day3Objective1 = day3.objective1();
+        int day3Objective2 = day3.objective2();
+        System.out.println("Day3:");
+        System.out.println("Objective 1: " + day3Objective1);
+        System.out.println("Objective 2: " + day3Objective2);
     }
 }
